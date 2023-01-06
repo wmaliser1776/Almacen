@@ -1,0 +1,26 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px"
+	 height="300px" viewBox="0 0 300 300" style="enable-background:new 0 0 300 300;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#FFFFFF;stroke-width:10;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#FFFFFF;stroke-width:5;stroke-miterlimit:10;}
+	.st2{fill:none;stroke:#FFFFFF;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+</style>
+<defs>
+</defs>
+<circle class="st0" cx="150" cy="150" r="145"/>
+<circle class="st1" cx="120.5" cy="217.5" r="9"/>
+<circle class="st1" cx="184.5" cy="217.5" r="9"/>
+<path class="st2" d="M203.5,202.5h-92c0,0-9-2-9-11s9-11,9-11h82c0,0,6,0,8-7l11-54h-112l10,51c0,0,1,5,5,9"/>
+<circle class="st1" cx="75.5" cy="97.5" r="9"/>
+<path class="st1" d="M85.5,93.5h5c0,0,5,0,5,4l5,22"/>
+<polyline class="st2" points="109,119.5 108.5,97.5 135.5,97.5 "/>
+<polyline class="st2" points="135.5,119.5 135.5,81.5 183.5,81.5 183.5,99.5 "/>
+<path class="st2" d="M112.86,97.5"/>
+<path class="st2" d="M164.5,119c0,0,0-18.47,19-19.5s21,19.5,21,19.5"/>
+<line class="st2" x1="168.5" y1="104.5" x2="168.5" y2="83.5"/>
+<line class="st2" x1="106.5" y1="139.5" x2="207.5" y2="139.5"/>
+<line class="st2" x1="111.5" y1="161.5" x2="201.5" y2="161.5"/>
+<line class="st2" x1="127.5" y1="121.5" x2="133.5" y2="177.5"/>
+<line class="st2" x1="185.5" y1="121.5" x2="178.5" y2="177.5"/>
+<line class="st2" x1="156.5" y1="121.5" x2="156.5" y2="178.5"/>
+</svg>

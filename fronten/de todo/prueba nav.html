@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRUEBA 1</title>
+</head>
+<body>
+    <style>
+       * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+       }
+
+       html{
+        font-size: 62,5%;
+        background-color: #641c34;
+       }
+      
+       body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        font-family: 'Quicksand', sans-serif;
+       }
+       .contenedor_1 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            border: 0.3rem solid white;
+            border-radius: 2rem;
+            background-color: #641c34;
+            padding-top: .5rem;
+            padding-bottom: .5rem;
+            margin: .5rem;    
+       }
+
+       .simbolo_almacen {
+        width: 150px;
+        height: 150px;
+        padding: .5rem;
+       }
+
+       .logo {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+       }
+
+       .titulo {
+          font-size: 35px;
+          color: white;
+          padding-bottom: 1rem;
+          margin-left: 35px;
+       }
+
+       .menu {
+            list-style: none;
+            padding: 0;
+            margin: 0 1rem 0 0;
+            display: flex;
+            align-items: center;
+           
+            
+       }
+
+       .menu ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            
+       }
+
+       .menu ul li {
+        margin-left: 1rem;
+       }
+       
+       .menu ul li a {
+            text-decoration: none;
+            color: white;
+            border: 1px solid white;
+            padding: 8px;
+            border-radius: 8px;
+       }
+
+       .menu ul li img {
+         width: 5rem;
+         height: 5rem;
+         margin-bottom: .5rem;
+       }
+
+        .item {
+            width: 6rem;
+            height: 6rem;
+            margin-bottom: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+
+
+       .contenedor_main {
+            display: flex;
+            height: 52vh;
+       }
+        .margen_izquierdo {
+            width: 10rem;
+            padding: 0;
+            background-color:  #641c34;
+            border: .3rem solid white;
+            border-radius: 2rem;
+            margin: .5rem
+
+        }
+        .conteiner_box {
+            display: flex;
+            flex-direction: column;
+            justify-content:space-around;
+            align-items: center;
+            height: 46vh;
+            margin: .5rem 0 .5rem 0;
+        }
+
+        .box {
+            width: 7rem;
+            height: 8rem;
+            border: 0.3rem solid white;
+            border-radius: 2rem;
+            margin: .5rem;
+
+        }
+        .box1 {
+            
+            background-color: aqua;
+        }
+        .box2 {
+            
+            background-color: red;
+        }
+        .box3 {
+            
+            background-color: aqua;
+        }
+        .box4 {
+            
+            background-color: red;
+        }
+
+       .data_principal {
+            width: 100%;
+            background-color:  #641c34;
+            border: .3rem solid white;
+            border-radius: 2rem;
+            padding: 1rem;
+            margin: .5rem; 
+
+       }
+       
+       .data_principal_p {
+            width: 8rem;
+            height: 8rem;
+            background-color: red;
+       }
+       
+
+
+
+
+       .contenedor_footer {
+            
+            width: 100%;
+            margin-top: auto;
+       }
+       .contenedor_abajo {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 0 25px 0 0;
+            border: 0.3rem solid white;
+            border-radius: 2rem;
+            background-color: #641c34;
+            padding: 1rem;
+            margin: .5rem;  
+
+       
+       }
+       .localizacion {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            height: 60px;
+       }
+       .localizacion img {
+         width: 3rem;
+         height: 3rem;
+       }
+       .localizacion a {
+            text-decoration: none;
+            color: white;
+            padding: 8px;
+            margin-left: ;
+            border-radius: 8px;
+       }
+
+       .redes {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            min-height: 60px;
+            max-height: 180px;
+       }
+       
+       .redes1 {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            text-decoration: none;
+            list-style: none;
+       }
+       .redes a{
+            padding: 0 24px 0 0;
+       }
+
+       .reds ul 
+       {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+       }
+       .redes ul li p {
+            color: white;
+            padding: 8px;
+            margin-left: ;
+            border-radius: 8px;
+       }
+       .redes ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 8px;
+            margin-left: ;
+            border-radius: 8px;
+       }
+
+
+       .redes ul li img {
+         width: 3rem;
+         height: 3rem;
+       }
+
+       .red-sociales {
+            width: 6rem;
+            height: 6rem;
+       }
+
+       .red3 {
+        display: flex;
+        align-items: center;
+        margin: auto;
+       }
+
+       .whatsapp {
+        display: flex;
+        align-items: center;
+       }
+
+       .whatsapp img {
+         width: 3rem;
+         height: 3rem;
+       }
+
+       .whatsapp p {
+            color: white;
+            padding: 8px;
+            margin-left: ;
+            border-radius: 8px;
+       }
+    </style>
+    <nav class="contenedor_1">
+        <div class="logo">
+            <img class="simbolo_almacen" src="./adonai/simbolo para almacen.png" alt="simbolo almacen">
+            <h1 class="titulo">Despensa Adonai</h1>
+        </div>
+        <div class="menu">
+                <ul>
+                    <li class="item">
+                    <img src="./adonai/simbolo para oferta.png" alt="Oferta">
+                    <a href="./">Ofertas</a>
+                </li>
+                    <li class="item">
+                    <img src="./adonai/simbolo de BEBIDA.png" alt="">
+                    <a href="./">Bebidas</a>
+                </li>
+                    <li class="item">
+                    <img src="./adonai/simbolo de jamon.png" alt="">
+                    <a href="./">Fiambreria</a>
+                </li>
+                    <li class="item">
+                    <img src="./adonai/SIMBOLO HELADO.png" alt="">
+                    <a href="./">Helado</a>
+                </li>
+                    <li class="item">
+                    <img src="./adonai/simbolo para almacen.png" alt="">
+                    <a href="./">Almacen</a>
+                </li>
+                    <li class="item">
+                    <img src="./adonai/simbolo limpieza.png" alt="">
+                    <a href="./">Limpieza</a>
+                </li>
+            </ul>
+            
+        </div>
+    </nav>
+    
+        </div>
+       </div> 
+       <main class="contenedor_main">
+        <div class="margen_izquierdo">
+          <div class="conteiner_box">
+            
+            <div class="box1 box">
+               <p>box1</p>
+            </div>
+
+            <div class="box2 box">
+                <p>box2</p>
+             </div>
+            
+             <div class="box3 box">
+                <p>box3</p>
+             </div>
+
+             <div class="box4 box">
+                <p>box4</p>
+             </div>
+            </div> 
+        </div>
+        <div class="data_principal">
+            <p class="data_principal_p">
+                data principal
+            </p>
+        </div>
+    </main>
+    <footer class="contenedor_footer">
+        <div class="contenedor_abajo">
+              <div class="localizacion">
+                <img src="./adonai/logo ubicasion.png" alt="">
+                <a href="https://www.google.com/maps/place/Pedro+Viera+202,+B1851CVE+Malvinas+Argentinas,+Provincia+de+Buenos+Aires/@-34.8141358,-58.4173692,17z/data=!3m1!4b1!4m5!3m4!1s0x95bcd39d809a135f:0xf02a3177c208b0f4!8m2!3d-34.8141358!4d-58.4173692" target="_blanck">Localizacion</a>
+              </div>
+        <div class="redes">
+              <ul class="redes1">
+                <li class="red3 red-social">
+                    <img src="./adonai/logo facebook.png" alt="Facebook">
+                    <a href="https://es-la.facebook.com/" target="_blanck">Facebook</a>
+                </li>
+                <li class="red3 red-social">
+                    <img src="./adonai/logo instagram.png" alt="Instagram">
+                    <a href="https://www.instagram.com" target="_blanck">Instagram</a>
+                </li>
+                <li class="red3 red-social">
+                    <img src="./adonai/logo twiter.png" alt="Twites">
+                    <a href="https://twitter.com/?lang=es" target="_blanck">Twites</a>
+                </li>
+              </ul>
+        </div>
+            <div class="whatsapp">
+                    <img src="./adonai/logo whatsapp.png" alt=" whatsapp">
+                    <p>whatsapp: 11 2345 2342 </p>
+            </div>
+       </div> 
+</div>
+    </footer>
+</body>
+</html>

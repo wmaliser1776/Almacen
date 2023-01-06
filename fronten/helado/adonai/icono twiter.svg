@@ -1,0 +1,13 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px"
+	 height="300px" viewBox="0 0 300 300" style="enable-background:new 0 0 300 300;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#FFFFFF;stroke-width:10;stroke-miterlimit:10;}
+	.st1{fill:#FFFFFF;stroke:#FFFFFF;stroke-miterlimit:10;}
+</style>
+<defs>
+</defs>
+<circle class="st0" cx="150" cy="150" r="145"/>
+<path class="st1" d="M68,202c23,22,82.5,9.5,82.5,9.5c56-20,66.41-80.17,64.29-92.6c-0.26-1.5,0.19-3.03,1.2-4.18L228,101l-16,4
+	l13.5-17.5L205,94c-15.49-14.72-34-9-35.5-8.5c-21,5-26,34-23.5,39.5c-48.59-5.59-59.42-29.55-68-36c-12.5,26.5,7.47,45.75,9,45
+	c-1.5,1.5-14.5-1.5-13.5-4.5c-4,19,22.89,37.15,26,34c-4,4-14,2-15,1c2.5,18.5,33,23,33,23C94,205,68,202,68,202z"/>
+</svg>

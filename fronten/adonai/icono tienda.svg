@@ -1,0 +1,23 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px"
+	 height="300px" viewBox="0 0 300 300" style="enable-background:new 0 0 300 300;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#FFFFFF;stroke-width:10;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#FFFFFF;stroke-width:5;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st2{fill:none;stroke:#FFFFFF;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st3{fill:none;stroke:#FFFFFF;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;}
+</style>
+<defs>
+</defs>
+<circle class="st0" cx="150" cy="150" r="145"/>
+<path class="st1" d="M209.86,79.5H91.64c-2.84,0-5.14-2.3-5.14-5.14v-0.71c0-2.84,2.3-5.14,5.14-5.14h118.21
+	c2.84,0,5.14,2.3,5.14,5.14v0.71C215,77.2,212.7,79.5,209.86,79.5z"/>
+<path class="st1" d="M88.5,81.5l-19,42c0,0-3,14,11,16s20-3,26-9l11-49H88.5z"/>
+<path class="st1" d="M212.5,81.5l19,42c0,0,1.07,14.42-10,16c-14,2-27-10-27-10l-11-48H212.5z"/>
+<path class="st1" d="M119.5,81.5l-11,49c0,0,12.38,10,20,10c10,0,13-2,21-11v-48H119.5z"/>
+<path class="st1" d="M181.5,81.5l11,47c-1-0.28-3.1,11.62-19,12c-15.42,0.37-20.86-9.4-22-11v-48H181.5z"/>
+<polyline class="st1" points="80.5,139.5 80.5,212.5 71.5,212.5 71.5,217.5 229.5,217.5 229.5,212.5 220.5,212.5 220.5,140 "/>
+<path class="st2" d="M216.5,211.5"/>
+<rect x="151.5" y="148.5" class="st1" width="58" height="44"/>
+<rect x="160.5" y="202.5" class="st3" width="40" height="15"/>
+<rect x="100.5" y="153.5" class="st1" width="40" height="64"/>
+</svg>

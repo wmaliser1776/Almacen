@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Despensa Adonai</title>
+</head>
+<body>
+    <style>
+       * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+       }
+
+       html{
+        font-size: 62,5%;
+        
+       }
+      
+       body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        font-family: 'Quicksand', sans-serif;
+       }
+
+       nav {
+        width: 100%;
+        color: #fff;
+        background: linear-gradient(45deg,#4C0033,#ff8800,#4C0033,#ff8800,#4C0033);
+        background-size:  400% 400%;
+        position: relative;
+        animation: cambiar 7s ease infinite;
+       }
+       .contenedor_1 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            border: 0.3rem solid white;
+            border-radius: 2rem;
+            padding-top: .5rem;
+            padding-bottom: .5rem;
+            margin: .5rem;    
+       }
+
+       .simbolo_almacen {
+        width: 150px;
+        height: 150px;
+        padding: .5rem;
+       }
+
+       .logo {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+       }
+
+       .titulo {
+          font-size: 50px;
+          font-weight: 10;
+          color: white;
+          padding-bottom: 1rem;
+          margin-left: 35px;
+       }
+
+       .menu {
+            list-style: none;
+            padding: 0;
+            margin: 0 1rem 0 0;
+            display: flex;
+            align-items: center;
+           
+            
+       }
+
+       .menu ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            
+       }
+
+       .menu ul li {
+        margin-left: 1rem;
+       }
+       
+       .menu ul li a {
+            text-decoration: none;
+            color: white;
+            border: 1px solid white;
+            padding: 8px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(89, 73, 30, .5);
+       }
+
+       .menu ul li a:hover {
+         border: 1px solid #4C0033;
+         color: #4C0033;
+         background-color: #ff8800;
+       }
+
+
+
+       .menu ul li img {
+         width: 5rem;
+         height: 5rem;
+         margin-bottom: .5rem;
+       }
+
+        .item {
+            width: 6rem;
+            height: 6rem;
+            margin-bottom: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+       .contenedor_main {
+            height: 48.5vh;
+            display: flex;
+            overflow-x: scroll;
+            overscroll-behavior-x: none;
+            scroll-snap-type: x proximity;
+            margin: 0 10px 0 10px;
+       }
+
+       .data_contenedor1 {
+            position: relative;
+
+            width: 30rem;
+            height: 43.5vh;
+            margin: .5rem;
+            border: .4rem solid #4C0033;
+            border-radius: 1rem;
+            padding: 25px 0 0 0; 
+            background: url(./adonai/img/OFERTA1.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+       }
+
+       .data_textoferta {
+        display: flex;
+        justify-content: center;
+       }
+       .data_textoferta a {
+            width: 100px;
+            min-width: 65px;
+            max-width: 150px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            border: 1px solid #4C0033;
+            padding: 8px;
+            margin: 0 10rem;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(89, 73, 30, .5);
+            background-color: #ff8800e8;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+       }
+
+       .data_contenedor2 {
+            position: relative;
+
+            width: 30rem;
+            height: 43.5vh;
+            margin: .5rem;
+            border: .4rem solid #4C0033;
+            border-radius: 1rem;
+            padding: .2rem; 
+            background: url(./adonai/img/bebida.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+       }
+
+       .data_contenedor3 {
+            position: relative;
+
+            width: 30rem;
+            height: 43.5vh;
+            margin: .5rem;
+            border: .4rem solid #4C0033;
+            border-radius: 1rem;
+            padding: .2rem; 
+            background: url(./adonai/img/submarine-sandwich-with-ham-cheese-lettuce-tomatoesonion-mortadella-and-sausage-on-wooden-table.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+       }
+
+       .data_contenedor4 {
+            position: relative;
+
+            width: 30rem;
+            height: 43.5vh;
+            margin: .5rem;
+            border: .4rem solid #4C0033;
+            border-radius: 1rem;
+            padding: .2rem; 
+            background: url(./adonai/img/helado.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+       }
+       .data_contenedor5 {
+            position: relative;
+
+            width: 30rem;
+            height: 43.5vh;
+            margin: .5rem;
+            border: .4rem solid #4C0033;
+            border-radius: 1rem;
+            padding: .2rem; 
+            background: url(./adonai/img/almacen1.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+       }
+       .data_contenedor6 {
+            position: relative;
+
+            width: 30rem;
+            height: 43.5vh;
+            margin: .5rem;
+            border: .4rem solid #4C0033;
+            border-radius: 1rem;
+            padding: .2rem; 
+            background: url(./adonai/img/close-up-set-of-home-cleaning-products-in-bright-basket-means-for-maintaining-cleanliness-background.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+       }
+
+
+       .data_text1 {
+            width: 12rem;
+            height: 38.3vh;
+            display: flex;
+            flex-direction: column;
+            margin: .5rem 200px .5rem .5rem;
+            border: .4rem solid #4C0033;
+            border-radius: 1rem;
+            padding: .2rem; 
+            background: linear-gradient(45deg,#4C0033,#ff8800,#4C0033,#ff8800,#4C0033);
+            background-size:  400% 400%;
+            position: relative;
+            animation: cambiar 7s ease infinite;
+       }
+       .data_textp1 {
+        color: #fff;
+        font-weight: bold;
+        background-color: #4C0033;
+        border: 1px solid #4C0033;
+        border-radius: 8px;
+        text-align: center;
+        padding: 5px;
+        margin: 5px;
+        font-size: 20px;
+        box-shadow: 0px 4px 8px rgba(89, 73, 30, .5);
+       }
+       .data_textp2 {
+          color: #fff;
+          text-align: center;
+          margin: auto;
+       }
+       .data_text1 a {
+            text-decoration: none;
+            color: white;
+            border: 1px solid white;
+            padding: 8px;
+            margin: 0 20px 20px 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-top: auto;
+            box-shadow: 0px 4px 8px rgba(89, 73, 30, .5);
+       }
+       .data_text1 a:hover {
+         border: 1px solid #4C0033;
+         color: #4C0033;
+         background-color: #ff8800;
+       }
+
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        ::-webkit-scrollbar-track {
+            border: 3px solid #4C0033;
+            border-radius: 10px;
+            box-shadow: inset 0 0 2.5px 2px rgba(red, green, blue, alpha);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to right,#ff8800,#4C0033,#ff8800);
+            border-radius: 6px;
+        }
+
+
+       .contenedor_footer {    
+        width: 100%;
+        color: #fff;
+        background: linear-gradient(45deg,#ff8800,#4C0033,#ff8800,#4C0033,#ff8800);
+        background-size:  400% 400%;
+        position: relative;
+        animation: cambiar 7s ease infinite;
+        margin-top: 9px;
+       }
+       .contenedor_abajo {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 25px 0 0;
+            border: 0.3rem solid white;
+            border-radius: 2rem;
+            padding: 1rem;
+            margin: .5rem;  
+
+       }
+       .localizacion {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            height: 60px;
+            
+       }
+       .localizacion img {
+         width: 3rem;
+         height: 3rem;
+       }
+       .localizacion a {
+            text-decoration: none;
+            color: white;
+            padding: 8px;
+            border-radius: 8px;
+       }
+
+       .redes {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            min-height: 60px;
+            max-height: 220px;
+       }
+       
+       .redes1 {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            text-decoration: none;
+            list-style: none;
+       }
+       .redes a{
+            padding: 0 24px 0 0;
+       }
+
+       .reds ul 
+       {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+       }
+       .redes ul li p {
+            color: white;
+            padding: 8px;
+            border-radius: 8px;
+       }
+       .redes ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 8px;
+            border-radius: 8px;
+       }
+
+
+       .redes ul li img {
+         width: 3rem;
+         height: 3rem;
+       }
+
+       .red-sociales {
+            width: 6rem;
+            height: 6rem;
+       }
+
+       .red3 {
+        display: flex;
+        align-items: center;
+        margin: auto;
+        margin: 1rem 0 1rem 0;
+
+       }
+
+       .whatsapp {
+        display: flex;
+        align-items: center;
+       }
+
+       .whatsapp img {
+         width: 3rem;
+         height: 3rem;
+       }
+
+       .whatsapp p {
+            color: white;
+            padding: 8px;
+            border-radius: 8px;
+       }
+       @keyframes cambiar{
+        0%{background-position: 0 50%;} 
+        50%{background-position: 100% 50%;}
+        100%{background-position: 0 50%;}
+       }
+    </style>
+    <nav>
+        <div class="contenedor_1">
+            <div class="logo">
+                <img class="simbolo_almacen" src="./adonai/icono tienda.svg" alt="simbolo almacen">
+                <h1 class="titulo">Despensa Adonai</h1>
+            </div>
+            <div class="menu">
+                    <ul>
+                        <li class="item">
+                        <img src="./adonai/item ofertas.svg" alt="Oferta">
+                        <a href="./">Ofertas</a>
+                    </li>
+                        <li class="item">
+                        <img src="./adonai/icono bebidas.svg" alt="bebida">
+                        <a href="./">Bebidas</a>
+                    </li>
+                        <li class="item">
+                        <img src="./adonai/icono jamon.svg" alt="fiambre">
+                        <a href="./">Fiambreria</a>
+                    </li>
+                        <li class="item">
+                        <img src="./adonai/icono helado.svg" alt="helado">
+                        <a href="./">Helado</a>
+                    </li>
+                        <li class="item">
+                        <img src="./adonai/icono tienda.svg" alt="almacen">
+                        <a href="./">Almacen</a>
+                    </li>
+                        <li class="item">
+                        <img src="./adonai/icono limpieza.svg" alt="limpieza">
+                        <a href="./">Limpieza</a>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+        
+    </nav>
+    
+        </div>
+       </div> 
+        <main class="contenedor_main">
+
+                    <div class="data_contenedor1">
+                        <div class="data_textoferta">
+                            <a href="">Visitar</a>
+                        </div>
+                    </div>
+
+                    <div class="data_contenedor2">
+                        <div class="data_text1">
+                            <p class="data_textp1">Bebidas</p> 
+                            <P class="data_textp2">Lo queres lo tenes</P>
+                            <a href="">Visitar</a>
+                        </div>
+                    </div>
+                    <div class="data_contenedor3">
+                        <div class="data_text1">
+                            <p class="data_textp1">Embutidos</p> 
+                            <P class="data_textp2">Lo queres lo tenes</P>
+                            <a href="">Visitar</a>
+                        </div>
+                    </div>
+                    <div class="data_contenedor4">
+                        <div class="data_text1">
+                            <p class="data_textp1">Helado</p> 
+                            <P class="data_textp2">Lo queres lo tenes</P>
+                            <a href="">Visitar</a>
+                        </div>
+                    </div>
+                    <div class="data_contenedor5">
+                        <div class="data_text1">
+                            <p class="data_textp1">Almacen</p> 
+                            <P class="data_textp2">Lo queres lo tenes</P>
+                            <a href="">Visitar</a>
+                        </div>
+                    </div>
+                    <div class="data_contenedor6">
+                        <div class="data_text1">
+                            <p class="data_textp1">Limpieza</p> 
+                            <P class="data_textp2">Lo queres lo tenes</P>
+                            <a href="">Visitar</a>
+                        </div>
+                    </div>
+
+        </main>
+    <footer class="contenedor_footer">
+        <div class="contenedor_abajo">
+              <div class="localizacion">
+                <img src="./adonai/icono ubicacion.svg" alt="">
+                <a href="https://www.google.com/maps/place/Pedro+Viera+202,+B1851CVE+Malvinas+Argentinas,+Provincia+de+Buenos+Aires/@-34.8141358,-58.4173692,17z/data=!3m1!4b1!4m5!3m4!1s0x95bcd39d809a135f:0xf02a3177c208b0f4!8m2!3d-34.8141358!4d-58.4173692" target="_blanck">Localizacion</a>
+              </div>
+        <div class="redes">
+              <ul class="redes1">
+                <li class="red3 red-social">
+                    <img src="./adonai/item facebook.svg" alt="Facebook">
+                    <a href="https://es-la.facebook.com/" target="_blanck">Facebook</a>
+                </li>
+                <li class="red3 red-social">
+                    <img src="./adonai/icono instagram.svg" alt="Instagram">
+                    <a href="https://www.instagram.com" target="_blanck">Instagram</a>
+                </li>
+                <li class="red3 red-social">
+                    <img src="./adonai/icono twiter.svg" alt="Twites">
+                    <a href="https://twitter.com/?lang=es" target="_blanck">Twites</a>
+                </li>
+              </ul>
+        </div>
+            <div class="whatsapp">
+                    <img src="./adonai/icono whatsapp.svg" alt=" whatsapp">
+                    <p>whatsapp: 11 2345 2342 </p>
+            </div>
+       </div> 
+</div>
+    </footer>
+</body>
+</html>
