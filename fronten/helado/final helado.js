@@ -32,8 +32,8 @@ const div1 = document.createElement('div');
 const parrafoUno = document.createElement('p');
 const textoParrafoUno = document.createTextNode('Jamon Cosido');
 
-const logoCards = document.createElement('img')
-
+const logoCards = document.createElement('img');
+logoCards.setAttribute('src','./img-helado/logo luvianka.svg')
 
 const parrafoDos = document.createElement('p');
 const textoParrafoDos = document.createTextNode('$' + '190');
