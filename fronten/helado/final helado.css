@@ -275,7 +275,30 @@
       .carrito {
         cursor: pointer;
       }
-   
+
+    .Carritofigure {
+      display: relative;
+    }
+      .itemCarritoImg {
+        display: relative;
+      }
+      .contenedorCantidadCarrito {
+        position: relative;
+        top: -68px;
+        left: 5px;
+      }
+
+      .cantidadCarrito {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 20px;
+      height: 20px;
+      background-color: #ff8800;
+      border-radius: 1rem;
+      font-weight: bold;
+      color: var(--black);
+      }
    
         /*Aqui termina la parte del menu desplegable del carrito 29/12/2022*/
    

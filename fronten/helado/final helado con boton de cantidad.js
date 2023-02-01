@@ -4,6 +4,7 @@ const elementoPadre = document.querySelector('.padre');
 const elementoInternoMenuDespla = document.querySelector('.myOrderContent');
 const bottonCardsMain = document.querySelector('pcompra_embutido');
 const inicioDeCruzDeMenuCarrito = document.querySelector("contenedor_1")
+const sumatoriaDeCarrito = document.getElementById('sumatoraCarrito')
 
 
 menuDesplegable.addEventListener('click', toggleproductDetail);
@@ -16,35 +17,38 @@ function toggleproductDetail() {
    productDetail.classList.toggle('inactive');
 }
 
-console.log('si funciona')
 
 
 //Aqui empiezo a trabajar con la lista de productos 12/01/2023
 
 
 const productList = [];
+console.log(productList)
 productList.push({
    id: 0,
    name: 'Palito de agua frutilla',
-   price: 120.00,
+   price: 120,
+   priceBace: 120,
    logo: './img-helado/LOGO Helami.png',
-   unidad: 1 + ' ' +'Unidad',
+   unidad: 1,
    image: './img-helado/plate-with-ice-cubes-and-ice-cream-on-top .jpg',
 });
 productList.push({
    id: 1,
    name: 'Palito de agua naranja',
-   price: 120.00,
+   price: 120,
+   priceBace: 120,
    logo: './img-helado/LOGO Helami.png',
-   unidad: 1 + ' ' +'Unidad',
+   unidad: 1,
    image: './img-helado/top-view-ice-cream-on-stick-on-plate.jpg',
 });
 productList.push({
    id: 2,
    name: 'Cono de crema',
-   price: 250.00,
+   price: 250,
+   priceBace: 250,
    logo: './img-helado/LOGO Helami.png',
-   unidad: 1 + ' ' +'Unidad',
+   unidad: 1,
    image: './img-helado/top-view-plate-with-ice-cream-on-cones.jpg',
 });
 
@@ -66,6 +70,9 @@ productList.push({
            <img class="img_embutido" src="../fiambre/img-fiambre/salami-sandwich-open-sandwich-of-salami-slices-on-bread.jpg" alt="jamon">
         </div>
 */
+
+const totalMenuCarrito = []
+console.log(totalMenuCarrito)
 
 const menucarrito =[];/* empiezo agregar la constante para poder agregar cosas al carrito 16/01/2023*/
 console.log(menucarrito)
@@ -92,9 +99,9 @@ divInicial.classList.add('carts_embutido');
       parrafoDos.classList.add('precio1_embutido');
       const textoParrafoDos = document.createTextNode('$' + product.price);
 
-      const parrafoTres = document.createElement('p');
-      parrafoTres.classList.add('p2_embutido');
-      const textoParrafoTres = document.createTextNode(product.unidad);
+      //const parrafoTres = document.createElement('p');
+      //parrafoTres.classList.add('p2_embutido');
+      //const textoParrafoTres = document.createTextNode(product.unidad);
 
       const botonCards = document.createElement('button');
       botonCards.classList.add('pcompra_embutido');
@@ -116,13 +123,13 @@ divInicial.appendChild(imgFondoCards);
 
 parrafoUno.appendChild(textoParrafoUno);
 parrafoDos.appendChild(textoParrafoDos);
-parrafoTres.appendChild(textoParrafoTres);
+//parrafoTres.appendChild(textoParrafoTres);
 botonCards.appendChild(textoBotonCards);
 
 div1.appendChild(parrafoUno);
 div1.appendChild(logoCards);
 div1.appendChild(parrafoDos);
-div1.appendChild(parrafoTres);
+//div1.appendChild(parrafoTres);
 div1.appendChild(botonCards);
 
 elementoPadre.appendChild(divInicial);
@@ -136,13 +143,55 @@ elementoPadre.addEventListener('click', e => {
       const productCarrito = e.target.id
       console.log(productCarrito)
 
-      const agregarAlCarrito = productList.find((product) => product.id == productCarrito)
-      console.log(agregarAlCarrito)
+
+
+
+/*  push para sumatorai total*/
+
+      const agregarAlCarritoSumatoria = productList.find((product) => product.id == productCarrito)
+      console.log(agregarAlCarritoSumatoria)
       
-      menucarrito.push(agregarAlCarrito);
-         console.log(menucarrito)
+      totalMenuCarrito.push(agregarAlCarritoSumatoria);
+         console.log(totalMenuCarrito)
+
+
+ /*  push para item menu*/
+
+      const existente = menucarrito.some(product => product.id == productCarrito)
+
+         if (existente){
+            const prod = menucarrito.map (product => {
+               if (product.id == productCarrito){
+                  product.unidad++; 
+                  product.price += product.priceBace;
+
+               }
+            })
+         }  else {
+            
+            const agregarAlCarrito = productList.find((product) => product.id == productCarrito)
+            console.log(agregarAlCarrito)
+            
+            menucarrito.push(agregarAlCarrito);
+               console.log(menucarrito)
+         }
+
+/* sumar cunado llegue a 0*/
+const agregarCuandoLlegueA0 = menucarrito.find((product) => product.id == productCarrito)
+const unidad = agregarCuandoLlegueA0.unidad;
+      
+         if  (unidad === 0) {
+            const prod = menucarrito.map (product => {
+               if (product.id == productCarrito){
+                  product.unidad++; 
+                  product.price += product.priceBace;
+
+               }
+            })
+         }
+
+
       actualizarCarritoCaca()
-      
       }    
 })
 
@@ -156,14 +205,23 @@ const actualizarCarritoCaca = () => {
       divInicialMenuDesplegable.classList.add('shopping-cart');
    
          const figureImagenDeMenu = document.createElement('figure');
+         figureImagenDeMenu.classList.add('carritoFigure')
    
             const ImagenDeMenu = document.createElement('img');
+            ImagenDeMenu.classList.add('itemCarritoImg')
             ImagenDeMenu.setAttribute('src', product.image);
+
+               const contenedorCantidadDeItem = document.createElement('div');
+               contenedorCantidadDeItem.classList.add('contenedorCantidadCarrito');
+
+                  const cantidadDeItem = document.createElement('p');
+                  cantidadDeItem.classList.add('cantidadCarrito');
+                  const textoCantidadDeItem = document.createTextNode(product.unidad)
    
                const nombreDeItem = document.createElement('p');
                const nombreDeItemDeMenu = document.createTextNode(product.name);
    
-   
+
                const precioDeItem = document.createElement('p');
                const textoprecioDeItem = document.createTextNode('$' + product.price)
    
@@ -179,20 +237,30 @@ const actualizarCarritoCaca = () => {
                      
             
             figureImagenDeMenu.appendChild(ImagenDeMenu);
+            figureImagenDeMenu.appendChild(contenedorCantidadDeItem);
+
+            contenedorCantidadDeItem.appendChild(cantidadDeItem);
+
+            cantidadDeItem.appendChild(textoCantidadDeItem);
    
          divInicialMenuDesplegable.appendChild(figureImagenDeMenu);
          divInicialMenuDesplegable.appendChild(nombreDeItem);
          divInicialMenuDesplegable.appendChild(precioDeItem);
          divInicialMenuDesplegable.appendChild(divbotonDeCrus);
+         
    
          nombreDeItem.appendChild(nombreDeItemDeMenu);
          precioDeItem.appendChild(textoprecioDeItem);
+         ;
    
          divbotonDeCrus.appendChild(botonDeCrus);
    
    
       elementoInternoMenuDespla.appendChild(divInicialMenuDesplegable);
+   
    })
+
+   sumatoriaDeCarrito.innerText = "$" + " " + totalMenuCarrito.reduce((acc , product) => acc + product.priceBace, 0)
 }
 
 console.log(elementoPadre);
@@ -219,15 +287,54 @@ console.log(elementoPadre);
 
       if(e.target.classList.contains('boton-crus'))
          {
+
+            const productCarrito2 = e.target.id
+      
+            const eliminarAlCarrito = totalMenuCarrito.find((product) => product.id == productCarrito2)
+            const indice = menucarrito.indexOf(eliminarAlCarrito)
+            totalMenuCarrito.splice(indice, 1)
+
+
+
+
          const productCarrito = e.target.id
-         console.log(productCarrito)
    
-         const eliminarAlCarrito = menucarrito.find((product) => product.id == productCarrito)
-         console.log(eliminarAlCarrito)
-         const indice = menucarrito.indexOf(eliminarAlCarrito)
-         console.log(indice)
-         menucarrito.splice(indice, 1)
-         }   
-         
+         const agregarAlCarritoItem = menucarrito.find((product) => product.id == productCarrito)
+   
+         const existente = menucarrito.some(product => product.id == productCarrito)
+   
+            if (existente){
+               const prod = menucarrito.map (product => {
+                  if (product.id == productCarrito){
+                     product.unidad--;  
+                     
+                     product.price -= product.priceBace
+                  }
+               })
+
+            }  
+            
+               const productCarritoquitar = e.target.id
+   
+               const quitarAlCarritoItem = menucarrito.find((product) => product.id == productCarritoquitar)
+               const unidad = quitarAlCarritoItem.unidad;
+
+
+            
+
+            if  (unidad === 0) {
+
+               const productCarrito3 = e.target.id
+               
+               const eliminarItemDeCarrito = menucarrito.find((product) => product.id == productCarrito3)
+               const indice5 = menucarrito.indexOf(eliminarItemDeCarrito)
+               menucarrito.splice(indice5, 1)
+            }
          actualizarCarritoCaca()
+         }    
+   
+   
+         
    })
+
+   
