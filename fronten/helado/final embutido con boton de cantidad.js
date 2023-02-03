@@ -31,9 +31,9 @@ productList.push({
    price: 190,
    priceBace: 190,
    unidadVariante: 100 + 'Gr',
-   logo: './img-fiambre/logo champion.svg',
+   logo: './img/logo champion.svg',
    unidad: 1,
-   image: './img-fiambre/salami-sandwich-open-sandwich-of-salami-slices-on-bread.jpg',
+   image: './img/embutidos 0-salami-sandwich-open-sandwich-of-salami-slices-on-bread.jpg',
 });
 productList.push({
    id: 1,
@@ -41,9 +41,9 @@ productList.push({
    price: 120,
    priceBace: 120,
    unidadVariante: 100 + 'Gr',
-   logo: './img-fiambre/logo champion.svg',
+   logo: './img/logo champion.svg',
    unidad: 1,
-   image: './img-fiambre/fresh-and-delicious-salami.jpg',
+   image: './img/embutidos 1-fresh-and-delicious-salami.jpg',
 });
 productList.push({
    id: 2,
@@ -51,9 +51,9 @@ productList.push({
    price: 120,
    priceBace: 120,
    unidadVariante: 100 + 'Gr',
-   logo: './img-fiambre/logo luvianka.svg',
+   logo: './img/logo luvianka.svg',
    unidad: 1,
-   image: './img-fiambre/tomatoes-with-bread-cheese-sausage-cucumbers-on-wooden-table-high-angle-view.jpg',
+   image: './img/embutidos 2-tomatoes-with-bread-cheese-sausage-cucumbers-on-wooden-table-high-angle-view.jpg',
 });
 productList.push({
     id: 3,
@@ -61,9 +61,9 @@ productList.push({
     price: 120,
     priceBace: 120,
     unidadVariante: 100 + 'Gr',
-    logo: './img-fiambre/logo champion.svg',
+    logo: './img/logo champion.svg',
     unidad: 1,
-    image: './img-fiambre/salami-sausage-platter-with-wide-selection-of-charcuterie-foods-and-vegetables.jpg',
+    image: './img/embutidos 3-salami-sausage-platter-with-wide-selection-of-charcuterie-foods-and-vegetables.jpg',
  });
 
  productList.push({
@@ -72,9 +72,9 @@ productList.push({
    price: 120,
    priceBace: 120,
    unidadVariante: 100 + 'Gr',
-   logo: './img-fiambre/logo cayelac.svg',
+   logo: './img/logo cayelac.svg',
    unidad: 1,
-   image: './img-fiambre/isometric-cheese-composition.jpg',
+   image: './img/embutidos 4-isometric-cheese-composition.jpg',
 });
 
 productList.push({
@@ -83,9 +83,9 @@ productList.push({
    price: 120,
    priceBace: 120,
    unidadVariante: 100 + 'Gr',
-   logo: './img-fiambre/logo punta del agua.svg',
+   logo: './img/logo punta del agua.svg',
    unidad: 1,
-   image: './img-fiambre/slices-of-cheddar-cheese-on-chopping-board-with-slat-and-pepper-shaker-on-table.jpg',
+   image: './img/embutidos 5-slices-of-cheddar-cheese-on-chopping-board-with-slat-and-pepper-shaker-on-table.jpg',
 });
 
 productList.push({
@@ -94,9 +94,9 @@ productList.push({
    price: 120,
    priceBace: 120,
    unidadVariante: 100 + 'Gr',
-   logo: './img-fiambre/logo depin.svg',
+   logo: './img/logo depin.svg',
    unidad: 1,
-   image: './img-fiambre/flat-lay-hot-dogs-with-copy-space .jpg',
+   image: './img/embutidos 6-flat-lay-hot-dogs-with-copy-space .jpg',
 });
 
 productList.push({
@@ -105,10 +105,12 @@ productList.push({
    price: 120,
    priceBace: 120,
    unidadVariante: 100 + 'Gr',
-   logo: './img-fiambre/logo champion.svg',
+   logo: './img/logo champion.svg',
    unidad: 1,
-   image: './img-fiambre/food-frame-with-copy-space-above-view .jpg',
+   image: './img/embutidos 7-food-frame-with-copy-space-above-view .jpg',
 });
+   
+
 
 
 
@@ -157,7 +159,7 @@ divInicial.classList.add('carts_visual');
       const textoParrafoDos = document.createTextNode('$' + product.price);
 
       const parrafoTres = document.createElement('p');
-      parrafoTres.classList.add('p2_visual');
+      parrafoTres.classList.add('p2_embutido');
       const textoParrafoTres = document.createTextNode(product.unidadVariante);
 
       const botonCards = document.createElement('button');
@@ -291,7 +293,7 @@ const actualizarCarritoCaca = () => {
             
                      const botonDeCrus = document.createElement('img');
                      botonDeCrus.classList.add('boton-crus');
-                     botonDeCrus.setAttribute('src','./img-fiambre/crus.svg');
+                     botonDeCrus.setAttribute('src','./img/crus.svg');
                      botonDeCrus.classList.add('crus');
                      botonDeCrus.setAttribute("id",product.id);
                      

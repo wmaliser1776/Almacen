@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./final fiambreria.css">
+    <link rel="stylesheet" href="./final helado.css">
+   
     <title>Despensa Adonai-Fiambre</title>
 </head>
 <body>
@@ -12,7 +13,7 @@
         <div class="contenedor_1">
             <div class="logo">
                 <img class="simbolo_almacen" src="../adonai/icono tienda.svg" alt="simbolo almacen">
-                <a href="../final almacen adonai.html"></a>
+                <a href="./final almacen adonai.html"></a>
             </div>
             <div class="logo">
                 <h1 class="titulo">Despensa<br>Adonai</h1>
@@ -29,11 +30,11 @@
                     </li>
                         <li class="item">
                         <img src="../adonai/icono jamon.svg" alt="fiambre">
-                        <a href="./">Fiambreria</a>
+                        <a href="./final embutido.html">Fiambreria</a>
                     </li>
                         <li class="item">
                         <img src="../adonai/icono helado.svg" alt="helado">
-                        <a href="./">Helado</a>
+                        <a href="./final helado.html">Helado</a>
                     </li>
                         <li class="item">
                         <img src="../adonai/icono tienda.svg" alt="almacen">
@@ -43,9 +44,9 @@
                         <img src="../adonai/icono limpieza.svg" alt="limpieza">
                         <a href="./">Limpieza</a>
                     </li>
-                    <li class="item carrito">
+                    <li id="botonCarrito" class="item carrito">
                       <img src="../adonai/img/carrito.svg" alt="carrito">
-                      <a href="">Carrito</a>
+                      <button class="buttonCarrito">Carrito</button>
                     </li>
                 </ul>
                 
@@ -57,7 +58,7 @@
           <img src="../fiambre/img-fiambre/flechita.svg" alt="arrow">
           <p class="title">My order</p>
           </div>
-          <div class="myOrderContent">
+            <div class="myOrderContent">
 
           </div>
               <!-- parte final de menu desplegable-->
@@ -66,7 +67,7 @@
                           <p>
                           <span>Total</span>
                           </p>
-                          <pid id="sumatoraCarrito"></pid>
+                          <p id="sumatoraCarrito"></p>
                           </div>
                           <button class="primary-button">
                           Checkout
@@ -85,8 +86,20 @@
 
 
        <main class="padre">
-
-
+       
+    <!--     
+        <div class="carts_embutido">
+            <div class="text_embutido">
+                <p class="p1_embutido">Jamon Cosido</p>
+                <img class="logo_embutido" src="../fiambre/img-fiambre/logo champion.svg" alt="logo champion">
+                <p class="precio1_embutido">$ <span class="precio2_embutido">190</span>.00</p>
+                <p class="p2_embutido">100 Gr</p>
+                <a href="./" class="pcompra_embutido">Comprar</a>
+            </div>
+                <img class="img_embutido" src="" alt="">
+        </div>
+    --> 
+       
 
      </main>
 
@@ -124,8 +137,6 @@
        </div> 
 </div>
     </footer>
-    <script src="./final fiambreria.js">
-
-    </script>
+    <script src="./final embutido con boton de cantidad.js"></script>
 </body>
 </html>

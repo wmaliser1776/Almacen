@@ -128,22 +128,22 @@
      background-color: #ff8800;
    }
 
-        .buttonCarrito {
-        text-decoration: none;
-        background-color: transparent;
-        color: var(--white);
-        border: 1px solid var(--white);
-        padding: 9px;
-        font-size: 14px;
-        border-radius: 8px;
-        box-shadow: 0px 4px 8px rgba(89, 73, 30, .5);
-        }
+   .buttonCarrito {
+    text-decoration: none;
+    background-color: transparent;
+    color: var(--white);
+    border: 1px solid var(--white);
+    padding: 9px;
+    font-size: 14px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(89, 73, 30, .5);
+    }
 
-        .buttonCarrito:hover {
-          border: 1px solid #4C0033;
-          color: #4C0033;
-          background-color: #ff8800;
-        }
+  .buttonCarrito:hover {
+    border: 1px solid #4C0033;
+    color: #4C0033;
+    background-color: #ff8800;
+  }
 
 
    .menu ul li img {
@@ -441,6 +441,11 @@
               z-index: 10;
               cursor: pointer;
               }
+
+              /*menu ul li a:hover*/
+
+
+
               .pcompra_visual:hover {
                 border: 1px solid #4C0033;
                 color: #4C0033;

@@ -2,9 +2,10 @@ const menuDesplegable = document.querySelector('.carrito');
 const productDetail = document.querySelector('.productDetail');
 const elementoPadre = document.querySelector('.padre');
 const elementoInternoMenuDespla = document.querySelector('.myOrderContent');
-const bottonCardsMain = document.querySelector('pcompra_embutido');
+const bottonCardsMain = document.querySelector('pcompra_visual');
 const inicioDeCruzDeMenuCarrito = document.querySelector("contenedor_1")
 const sumatoriaDeCarrito = document.getElementById('sumatoraCarrito')
+const botonDeActulaizacionCarritoParaLocalStorage =  document.getElementById('botonCarrito')
 
 
 menuDesplegable.addEventListener('click', toggleproductDetail);
@@ -25,31 +26,31 @@ function toggleproductDetail() {
 const productList = [];
 console.log(productList)
 productList.push({
-   id: 0,
+   id: 100,
    name: 'Palito de agua frutilla',
    price: 120,
    priceBace: 120,
-   logo: './img-helado/LOGO Helami.png',
+   logo: './img/LOGO helado 1-Helami.png',
    unidad: 1,
-   image: './img-helado/plate-with-ice-cubes-and-ice-cream-on-top .jpg',
+   image: './img/helado 1-plate-with-ice-cubes-and-ice-cream-on-top .jpg',
 });
 productList.push({
-   id: 1,
+   id: 101,
    name: 'Palito de agua naranja',
    price: 120,
    priceBace: 120,
-   logo: './img-helado/LOGO Helami.png',
+   logo: './img/LOGO helado 1-Helami.png',
    unidad: 1,
-   image: './img-helado/top-view-ice-cream-on-stick-on-plate.jpg',
+   image: './img/helado 2-top-view-ice-cream-on-stick-on-plate.jpg',
 });
 productList.push({
-   id: 2,
+   id: 102,
    name: 'Cono de crema',
    price: 250,
    priceBace: 250,
-   logo: './img-helado/LOGO Helami.png',
+   logo: './img/LOGO helado 1-Helami.png',
    unidad: 1,
-   image: './img-helado/top-view-plate-with-ice-cream-on-cones.jpg',
+   image: './img/helado 3-top-view-plate-with-ice-cream-on-cones.jpg',
 });
 
 
@@ -71,32 +72,32 @@ productList.push({
         </div>
 */
 
-const totalMenuCarrito = []
+const totalMenuCarrito = JSON.parse(localStorage.getItem("carritoTotal")) || [];
 console.log(totalMenuCarrito)
 
-const menucarrito =[];/* empiezo agregar la constante para poder agregar cosas al carrito 16/01/2023*/
+const menucarrito =JSON.parse(localStorage.getItem("carritoItem")) || []; /* empiezo agregar la constante para poder agregar cosas al carrito 16/01/2023*/
 console.log(menucarrito)
 
 
 for (product of productList){
 
 const divInicial = document.createElement('div');
-divInicial.classList.add('carts_embutido');
+divInicial.classList.add('carts_visual');
 
 
    const div1 = document.createElement('div');
-   div1.classList.add('text_embutido');
+   div1.classList.add('text_visual');
 
       const parrafoUno = document.createElement('p');
-      parrafoUno.classList.add('p1_embutido');
+      parrafoUno.classList.add('p1_visual');
       const textoParrafoUno = document.createTextNode(product.name);
 
       const logoCards = document.createElement('img');
-      logoCards.classList.add('logo_embutido');
+      logoCards.classList.add('logo_visual');
       logoCards.setAttribute('src', product.logo);
 
       const parrafoDos = document.createElement('p');
-      parrafoDos.classList.add('precio1_embutido');
+      parrafoDos.classList.add('precio1_visual');
       const textoParrafoDos = document.createTextNode('$' + product.price);
 
       //const parrafoTres = document.createElement('p');
@@ -104,7 +105,7 @@ divInicial.classList.add('carts_embutido');
       //const textoParrafoTres = document.createTextNode(product.unidad);
 
       const botonCards = document.createElement('button');
-      botonCards.classList.add('pcompra_embutido');
+      botonCards.classList.add('pcompra_visual');
       botonCards.setAttribute("id", product.id);
 
       const textoBotonCards = document.createTextNode('Comprar');
@@ -113,7 +114,7 @@ divInicial.classList.add('carts_embutido');
 
 
 const imgFondoCards = document.createElement('img');
-imgFondoCards.classList.add('img_embutido');
+imgFondoCards.classList.add('img_visual');
 imgFondoCards.setAttribute('src', product.image);
 
 
@@ -136,9 +137,10 @@ elementoPadre.appendChild(divInicial);
 
 };
 
+
 elementoPadre.addEventListener('click', e => {
 
-   if(e.target.classList.contains('pcompra_embutido'))
+   if(e.target.classList.contains('pcompra_visual'))
       {
       const productCarrito = e.target.id
       console.log(productCarrito)
@@ -191,9 +193,11 @@ const unidad = agregarCuandoLlegueA0.unidad;
          }
 
 
-      actualizarCarritoCaca()
+      actualizarCarritoCaca();
+      saveLocal();
       }    
 })
+
 
 
 const actualizarCarritoCaca = () => {
@@ -231,7 +235,7 @@ const actualizarCarritoCaca = () => {
             
                      const botonDeCrus = document.createElement('img');
                      botonDeCrus.classList.add('boton-crus');
-                     botonDeCrus.setAttribute('src','./img-helado/crus.svg');
+                     botonDeCrus.setAttribute('src','./img/crus.svg');
                      botonDeCrus.classList.add('crus');
                      botonDeCrus.setAttribute("id",product.id);
                      
@@ -264,6 +268,8 @@ const actualizarCarritoCaca = () => {
 }
 
 console.log(elementoPadre);
+
+botonDeActulaizacionCarritoParaLocalStorage.addEventListener('click', actualizarCarritoCaca);
 
 
 /* empiezo agregar la constante para poder agregar cosas al carrito 16/01/2023*/
@@ -331,10 +337,16 @@ console.log(elementoPadre);
                menucarrito.splice(indice5, 1)
             }
          actualizarCarritoCaca()
+         saveLocal();
          }    
    
    
          
    })
+
+   const saveLocal = () => {
+      localStorage.setItem("carritoTotal",JSON.stringify (totalMenuCarrito));
+      localStorage.setItem("carritoItem",JSON.stringify (menucarrito));
+   };
 
    

@@ -1,0 +1,20 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="300.05px" height="300.05px" viewBox="0 0 300.05 300.05" style="enable-background:new 0 0 300.05 300.05;"
+	 xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#FFFFFF;stroke-width:10;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#FFFFFF;stroke-width:5;stroke-miterlimit:10;}
+	.st2{fill:none;stroke:#000000;stroke-miterlimit:10;}
+</style>
+<defs>
+</defs>
+<circle class="st0" cx="150.03" cy="150.03" r="145"/>
+<path class="st1" d="M198.69,147.84l-71.72-39.75l-38.89,70.16l-14.93,26.93c-1.34,2.42-0.47,5.46,1.95,6.8l62.97,34.91
+	c2.42,1.34,5.46,0.47,6.8-1.95l14.41-25.99L198.69,147.84z"/>
+<line class="st1" x1="87.2" y1="178.8" x2="159.31" y2="218.88"/>
+<path class="st1" d="M126.97,108.09c12.11-21.84,27.9-26.46,40.05-26c10.72,0.41,18.6,4.77,18.6,4.77
+	c19.59,12,27.13,35.62,13.07,60.98"/>
+<path class="st2" d="M184.02,50.53"/>
+<polyline class="st1" points="166.57,82.02 178.07,61.28 184.02,50.53 217.26,68.96 200,100.09 "/>
+<line class="st1" x1="202.65" y1="75.72" x2="177.72" y2="61.9"/>
+</svg>
