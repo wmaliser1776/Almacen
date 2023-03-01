@@ -1,11 +1,20 @@
 const menuDesplegable = document.querySelector('.carrito');
 const productDetail = document.querySelector('.productDetail');
+
+
 const elementoPadre = document.querySelector('.padre');
 const elementoInternoMenuDespla = document.querySelector('.myOrderContent');
 const bottonCardsMain = document.querySelector('pcompra_visual');
 const inicioDeCruzDeMenuCarrito = document.querySelector("contenedor_1")
 const sumatoriaDeCarrito = document.getElementById('sumatoraCarrito')
 const botonDeActulaizacionCarritoParaLocalStorage =  document.getElementById('botonCarrito')
+const botonDeMenuDeConfirmacion = document.querySelector('.tituloBoton');
+
+
+const menuDesplegableConfirmacion = document.querySelector('.tituloBoton');
+const botonMenuDeConfirmacion = document.querySelector('.menuDeConfirmacion');
+
+
 
 
 menuDesplegable.addEventListener('click', toggleproductDetail);
@@ -20,115 +29,64 @@ function toggleproductDetail() {
 
 
 
+
+menuDesplegableConfirmacion.addEventListener('click', toggleproductmain);
+console.log(menuDesplegableConfirmacion)
+
+function toggleproductmain () {
+   botonMenuDeConfirmacion.classList.toggle('activar');
+}
+
+function toggleproductmain () {
+   botonMenuDeConfirmacion.classList.toggle('activar');
+}
+
+
+
+//function verdeconfirmacion(){
+//   document.querySelector("shopping-cart").setAttribute("bgcolor");
+
+//}
+
+
 //Aqui empiezo a trabajar con la lista de productos 12/01/2023
 
 
 const productList = [];
 console.log(productList)
 productList.push({
-   id: 0,
-   name: 'Jamon Cosido',
-   price: 190,
-   priceBace: 190,
-   unidadVariante: 100 + 'Gr',
-   logo: './img/logo champion.svg',
-   unidad: 1,
-   image: './img/embutidos 0-salami-sandwich-open-sandwich-of-salami-slices-on-bread.jpg',
-   imagenConfirmacion: './img/tilde.svg',
-   numeroDeImagenDeConfirmacion: 0,
-});
-
-productList.push({
-   id: 1,
-   name: 'Salame',
+   id: 100,
+   name: 'Palito de agua frutilla',
    price: 120,
    priceBace: 120,
-   unidadVariante: 100 + 'Gr',
-   logo: './img/logo champion.svg',
+   logo: './img/LOGO helado 1-Helami.png',
    unidad: 1,
-   image: './img/embutidos 1-fresh-and-delicious-salami.jpg',
+   image: './img/helado 1-plate-with-ice-cubes-and-ice-cream-on-top .jpg',
    imagenConfirmacion: './img/tilde.svg',
    numeroDeImagenDeConfirmacion: 0,
 });
-
 productList.push({
-   id: 2,
-   name: 'Salchichón primavera',
+   id: 101,
+   name: 'Palito de agua naranja',
    price: 120,
    priceBace: 120,
-   unidadVariante: 100 + 'Gr',
-   logo: './img/logo luvianka.svg',
+   logo: './img/LOGO helado 1-Helami.png',
    unidad: 1,
-   image: './img/embutidos 2-tomatoes-with-bread-cheese-sausage-cucumbers-on-wooden-table-high-angle-view.jpg',
+   image: './img/helado 2-top-view-ice-cream-on-stick-on-plate.jpg',
    imagenConfirmacion: './img/tilde.svg',
    numeroDeImagenDeConfirmacion: 0,
 });
-
 productList.push({
-    id: 3,
-    name: 'Mortadela',
-    price: 120,
-    priceBace: 120,
-    unidadVariante: 100 + 'Gr',
-    logo: './img/logo champion.svg',
-    unidad: 1,
-    image: './img/embutidos 3-salami-sausage-platter-with-wide-selection-of-charcuterie-foods-and-vegetables.jpg',
-    imagenConfirmacion: './img/tilde.svg',
-    numeroDeImagenDeConfirmacion: 0,
- });
-
- productList.push({
-   id: 4,
-   name: 'Queso',
-   price: 120,
-   priceBace: 120,
-   unidadVariante: 100 + 'Gr',
-   logo: './img/logo cayelac.svg',
+   id: 102,
+   name: 'Cono de crema',
+   price: 250,
+   priceBace: 250,
+   logo: './img/LOGO helado 1-Helami.png',
    unidad: 1,
-   image: './img/embutidos 4-isometric-cheese-composition.jpg',
+   image: './img/helado 3-top-view-plate-with-ice-cream-on-cones.jpg',
    imagenConfirmacion: './img/tilde.svg',
    numeroDeImagenDeConfirmacion: 0,
 });
-
-productList.push({
-   id: 5,
-   name: 'Queso Cremos',
-   price: 120,
-   priceBace: 120,
-   unidadVariante: 100 + 'Gr',
-   logo: './img/logo punta del agua.svg',
-   unidad: 1,
-   image: './img/embutidos 5-slices-of-cheddar-cheese-on-chopping-board-with-slat-and-pepper-shaker-on-table.jpg',
-   imagenConfirmacion: './img/tilde.svg',
-   numeroDeImagenDeConfirmacion: 0,
-});
-
-productList.push({
-   id: 6,
-   name: 'Salchicha',
-   price: 120,
-   priceBace: 120,
-   unidadVariante: 100 + 'Gr',
-   logo: './img/logo depin.svg',
-   unidad: 1,
-   image: './img/embutidos 6-flat-lay-hot-dogs-with-copy-space .jpg',
-   imagenConfirmacion: './img/tilde.svg',
-   numeroDeImagenDeConfirmacion: 0,
-});
-
-productList.push({
-   id: 7,
-   name: 'Salchicha',
-   price: 120,
-   priceBace: 120,
-   unidadVariante: 100 + 'Gr',
-   logo: './img/logo champion.svg',
-   unidad: 1,
-   image: './img/embutidos 7-food-frame-with-copy-space-above-view .jpg',
-   imagenConfirmacion: './img/tilde.svg',
-   numeroDeImagenDeConfirmacion: 0,
-});
-   
 
 
 
@@ -156,63 +114,158 @@ const menucarrito =JSON.parse(localStorage.getItem("carritoItem")) || []; /* emp
 console.log(menucarrito)
 
 
-for (product of productList){
+menucarrito.forEach((product) => {
 
-const divInicial = document.createElement('div');
-divInicial.classList.add('carts_visual');
-
-
-   const div1 = document.createElement('div');
-   div1.classList.add('text_visual');
-
-      const parrafoUno = document.createElement('p');
-      parrafoUno.classList.add('p1_visual');
-      const textoParrafoUno = document.createTextNode(product.name);
-
-      const logoCards = document.createElement('img');
-      logoCards.classList.add('logo_visual');
-      logoCards.setAttribute('src', product.logo);
-
-      const parrafoDos = document.createElement('p');
-      parrafoDos.classList.add('precio1_visual');
-      const textoParrafoDos = document.createTextNode('$' + product.price);
-
-      const parrafoTres = document.createElement('p');
-      parrafoTres.classList.add('p2_embutido');
-      const textoParrafoTres = document.createTextNode(product.unidadVariante);
-
-      const botonCards = document.createElement('button');
-      botonCards.classList.add('pcompra_visual');
-      botonCards.setAttribute("id", product.id);
-
-      const textoBotonCards = document.createTextNode('Comprar');
+const divInicialMenuDesplegable = document.createElement('div');
+divInicialMenuDesplegable.classList.add('contenedorItemDeConfirmacion')
       
-   divInicial.appendChild(div1);
+   
+      const divDeseparacionDeConfirmacion = document.createElement('div')
+      divDeseparacionDeConfirmacion.classList.add('shopping-cart');
+
+         const figureImagenDeMenu = document.createElement('figure');
+         figureImagenDeMenu.classList.add('carritoFigure')
+   
+            const ImagenDeMenu = document.createElement('img');
+            ImagenDeMenu.classList.add('itemCarritoImg')
+            ImagenDeMenu.setAttribute('src', product.image);
+
+               const contenedorCantidadDeItem = document.createElement('div');
+               contenedorCantidadDeItem.classList.add('contenedorCantidadCarrito');
+
+                  const cantidadDeItem = document.createElement('p');
+                  cantidadDeItem.classList.add('cantidadCarrito');
+                  const textoCantidadDeItem = document.createTextNode(product.unidad)
+   
+               const nombreDeItem = document.createElement('p');
+               nombreDeItem.classList.add('nombreItemsConfirmacion')
+               const nombreDeItemDeMenu = document.createTextNode(product.name);
+   
+
+               const precioDeItem = document.createElement('p');
+               const textoprecioDeItem = document.createTextNode('$' + product.price)
+   
+                  const divbotonDeCrus = document.createElement('div');
+                  divbotonDeCrus.classList.add('div-crus-menu1');
+   
+            
+                     const botonDeCrus = document.createElement('img');
+                     botonDeCrus.classList.add('boton-crus');
+                     botonDeCrus.setAttribute('src','./img/crus.svg');
+                     botonDeCrus.classList.add('crus');
+                     botonDeCrus.setAttribute("id",product.id);
 
 
-const imgFondoCards = document.createElement('img');
-imgFondoCards.classList.add('img_visual');
-imgFondoCards.setAttribute('src', product.image);
+                     const botonDeMas = document.createElement('img');
+                     botonDeMas.classList.add('boton-crus');
+                     botonDeMas.setAttribute('src','./img/mas.svg');
+                     botonDeMas.classList.add('crus');
+                     botonDeMas.setAttribute("id",product.id);
 
 
-divInicial.appendChild(imgFondoCards);
+                  const seccionDeConfirmacion = document.createElement('div');
+                  seccionDeConfirmacion.classList.add('divDeSeparacionDeConfirmacion');
+
+                     const capsulaTextoDeConfirmacion = document.createElement('p');
+                     capsulaTextoDeConfirmacion.classList.add('textoDeConfirmacion')
+                     const TextoDeConfirmacion = document.createTextNode('NO CONFIRMADO');
+
+                     const botonDeConfirmacion = document.createElement('img');
+                     botonDeConfirmacion.classList.add('boton-tilde');
+                     botonDeConfirmacion.setAttribute('src',product.imagenConfirmacion)
+                     botonDeConfirmacion.setAttribute("id",product.id);
+                     
+            
+            figureImagenDeMenu.appendChild(ImagenDeMenu);
+            figureImagenDeMenu.appendChild(contenedorCantidadDeItem);
+
+            contenedorCantidadDeItem.appendChild(cantidadDeItem);
+
+            cantidadDeItem.appendChild(textoCantidadDeItem);
+   
+         divDeseparacionDeConfirmacion.appendChild(figureImagenDeMenu);
+         divDeseparacionDeConfirmacion.appendChild(nombreDeItem);
+         divDeseparacionDeConfirmacion.appendChild(precioDeItem);
+         divDeseparacionDeConfirmacion.appendChild(divbotonDeCrus);
+         divDeseparacionDeConfirmacion.appendChild(seccionDeConfirmacion);
+         
+         
+   
+         nombreDeItem.appendChild(nombreDeItemDeMenu);
+         precioDeItem.appendChild(textoprecioDeItem);
+         
+   
+         divbotonDeCrus.appendChild(botonDeCrus);
+         divbotonDeCrus.appendChild(botonDeMas);
+
+         seccionDeConfirmacion.appendChild(capsulaTextoDeConfirmacion);
+         seccionDeConfirmacion.appendChild(botonDeConfirmacion);
+
+            capsulaTextoDeConfirmacion.appendChild(TextoDeConfirmacion);
+
+         divInicialMenuDesplegable.appendChild(divDeseparacionDeConfirmacion);
+         divInicialMenuDesplegable.appendChild(seccionDeConfirmacion);
+
+         botonMenuDeConfirmacion.appendChild(divInicialMenuDesplegable);
+
+         
+});
 
 
 
-parrafoUno.appendChild(textoParrafoUno);
-parrafoDos.appendChild(textoParrafoDos);
-parrafoTres.appendChild(textoParrafoTres);
-botonCards.appendChild(textoBotonCards);
+// const botonDeConfirmacion = document.querySelector('.boton-tilde')
 
-div1.appendChild(parrafoUno);
-div1.appendChild(logoCards);
-div1.appendChild(parrafoDos);
-div1.appendChild(parrafoTres);
-div1.appendChild(botonCards);
+elementoPadre.addEventListener('click', e => {
 
-elementoPadre.appendChild(divInicial);
+   if(e.target.classList.contains('boton-tilde'))
+   {
+   const botonDeConfirmacionInterno = e.target.parentElement;
+   
+   let textoDeConfirmacion = botonDeConfirmacionInterno.querySelector('p').textContent;
+   console.log(textoDeConfirmacion)
+   
+   confirmacion()
+   }
+});
 
-};
+function confirmacion(textoDeConfirmacion){
+   let pic;
+   if (textoDeConfirmacion =='NO CONFIRMADO'){
+      pic = "./img/tilde ok.svg"
+   }
+
+   else{
+      pic = "./img/tilde.svg"
+   }
+   document.getElementsByClassName('boton-tilde').src =pic;
+}
+
+console.log(confirmacion)
+
+
+
+// const botonDeConfirmacion = document.querySelector('.boton-tilde')
+
+
+// botonDeConfirmacion.addEventListener('click', cambiarColor)
+// console.log(botonDeConfirmacion)
+
+// let fotomostrada = "tilde.svg";
+
+// function cambiarColor(){
+
+//    let imagenConfirmacion = document.getElementById('.botonDeConfirmacionClase');
+
+//    if(fotomostrada == "tilde.svg"){
+//       botonDeConfirmacion.src = "./img/tilde ok.svg";
+//       fotomostrada = "tilde ok.svg"
+//    }
+//    else{
+//       botonDeConfirmacion.src = "./img/tilde.svg";
+//       fotomostrada ="tilde.svg";
+//    } 
+// }
+
 
 
 elementoPadre.addEventListener('click', e => {
@@ -427,3 +480,4 @@ botonDeActulaizacionCarritoParaLocalStorage.addEventListener('click', actualizar
    };
 
    
+ 

@@ -18,6 +18,8 @@
     --hospital-green: #ACD9B2;
     --naranja: #ff8800;
     --purpura: #4C0033;
+    --verdeSuabe: #91F57D;
+    --rojo:#FF6767;
     --sm: 14px;
     --md: 16px;
     --lg: 18px;
@@ -34,8 +36,8 @@
 
    nav {
     width: 100%;
-    color: #fff;
-    background: linear-gradient(45deg,#4C0033,#ff8800,#4C0033,#ff8800,#4C0033);
+    color:var(--white);
+    background: linear-gradient(45deg,var(--purpura),var(--naranja),var(--purpura),var(--naranja),var(--purpura));
     background-size:  400% 400%;
     position: relative;
     animation: cambiar 7s ease infinite;
@@ -80,7 +82,7 @@
    .titulo {
       font-size: 50px;
       font-weight: 10;
-      color: white;
+      color: var(--white);
       padding-bottom: 1rem;
    }
 
@@ -115,35 +117,35 @@
    
    .menu ul li a {
         text-decoration: none;
-        color: white;
-        border: 1px solid white;
+        color: var(--white);
+        border: 1px solid var(--white);
         padding: 8px;
         border-radius: 8px;
         box-shadow: 0px 4px 8px rgba(89, 73, 30, .5);
    }
 
    .menu ul li a:hover {
-     border: 1px solid #4C0033;
-     color: #4C0033;
-     background-color: #ff8800;
+     border: 1px solid var(--purpura);
+     color: var(--purpura);
+     background-color: var(--naranja);
    }
 
-   .buttonCarrito {
-    text-decoration: none;
-    background-color: transparent;
-    color: var(--white);
-    border: 1px solid var(--white);
-    padding: 9px;
-    font-size: 14px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(89, 73, 30, .5);
-    }
+        .buttonCarrito {
+        text-decoration: none;
+        background-color: transparent;
+        color: var(--white);
+        border: 1px solid var(--white);
+        padding: 9px;
+        font-size: 14px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(89, 73, 30, .5);
+        }
 
-  .buttonCarrito:hover {
-    border: 1px solid #4C0033;
-    color: #4C0033;
-    background-color: #ff8800;
-  }
+        .buttonCarrito:hover {
+          border: 1px solid var(--purpura);
+          color: var(--purpura);
+          background-color: var(--naranja);
+        }
 
 
    .menu ul li img {
@@ -211,15 +213,15 @@
         margin-top: 24px;
         margin-bottom: 24px;
         border-radius: 8px;
-        padding: 0 24px;
+        padding: 0 10px;
       }
       .order p:nth-child(1) {
         display: flex;
         flex-direction: column;
       }
       .order p span:nth-child(1) {
-        color: var(--gris);
-        font-size: var(--md);
+        color: var(--black);
+        font-size: 25px;
         font-weight: bold;
       }
       .order p:nth-child(2) {
@@ -228,12 +230,14 @@
         font-weight: bold;
       }
       .shopping-cart {
-        display: grid;
-        grid-template-columns: auto 1fr auto auto;
-        gap: 16px;
-        margin-bottom: 24px;
-        margin-right: 20px;
+        display: flex;
+        justify-content: space-between;
+        margin: 10px;
         align-items: center;
+      }
+
+      .textoNombre {
+        padding: 10px;
       }
       .shopping-cart figure {
         margin: 0;
@@ -245,6 +249,9 @@
         object-fit: cover;
       }
    
+      .carritoFigure {
+        margin: 0px;
+      }
       .div-crus-menu1{
         display: flex;
         justify-content: center;
@@ -260,6 +267,7 @@
         height: 1.5rem;
         width: 1.5rem;
         border-radius: 1rem;
+        margin: 0 10px;
       }
    
       .shopping-cart p:nth-child(2) {
@@ -283,9 +291,9 @@
         height: 50px;
       }
       .primary-button:hover {
-        border: 1px solid #4C0033;
-        color: #4C0033;
-        background-color: #ff8800;
+        border: 1px solid var(--purpura);
+        color: var(--purpura);
+        background-color: var(--naranja);
       }
    
       .carrito {
@@ -310,7 +318,7 @@
       align-items: center;
       width: 20px;
       height: 20px;
-      background-color: #ff8800;
+      background-color: var(--naranja);
       border-radius: 1rem;
       font-weight: bold;
       color: var(--black);
@@ -327,6 +335,151 @@
      padding: 1rem;
      z-index: 1;
     }
+
+    .contenedorConfirmacion {
+      width: 750px;
+      
+    }
+
+    .contenedorItemDeConfirmacion {
+      border: solid 1px;
+      border-radius: 5px;
+      margin: 4px 0 4px 4px ;
+      
+    }
+    
+    .divisionDeMain {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      flex-wrap: wrap;
+ 
+    }
+
+    .tituloBoton {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: var(--purpura);
+      margin: 20px 0px;
+      border-radius: 5px;
+      cursor: pointer;
+      min-width: 300px;
+    }
+
+    .tituloBoton:hover {
+      border: 1px solid var(--purpura);
+      color: var(--purpura);
+      background-color: var(--naranja);
+    }
+
+    .tituloDeConfirmacion {
+      padding: 10px;
+      border-radius: 10px;
+      color: var(--white);
+    }
+    
+    .imagenCarritoTiulo {
+      width: 100px;
+      height: 100px;
+      padding: 10px;
+    }
+
+      .activar {
+        display: none;
+      }
+
+
+      .nombreItemsConfirmacion {
+        margin: 7.5px;
+      }
+      
+      .menuDeConfirmacion{
+        height: 42vh;
+        overflow-y: scroll;
+        overscroll-behavior-y: none;
+        scroll-snap-type: y proximity;
+      }
+
+      .divDeSeparacionDeConfirmacion{
+        width: 200px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--rojo);
+        border-radius: 5px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+      }
+
+      .boton-tilde {
+        height: 1.5rem;
+        width: 1.5rem;
+        border-radius: 1rem;
+        margin: 0 10px;
+      }
+
+
+      .formulario {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        min-width: 300px;
+        margin: 10px;
+        background-color: var(--purpura);
+        border-radius: 10px;
+      }
+
+      .inputName {
+        display: flex;
+        width: 300px;
+        margin: 10px;
+        padding: 10px;
+        background-color: var(--naranja);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+      }
+
+      .nombreCompleto {
+        font-size: 25px;
+        padding: 5px;
+      }
+
+      .inputNombre {
+        width: 250px;
+        font-size: 25px;
+        border-radius: 5px;
+      }
+
+      .inputHorarioDia {
+        width: 250px;
+        font-size: 20px;
+        
+        border-radius: 5px;
+      }
+
+      .formularioButton {
+        width: 250px;
+        height: 50px;
+        border-radius: 5px;
+        font-size: 25px;
+        color: var(--white);
+        text-shadow: 1px 1px 1px #000;
+        background-color: var(--purpura);
+        cursor: pointer;
+      }
+
+      .formularioButton:hover {
+        border: 2px solid var(--purpura);
+        color: var(--white);
+        background-color: var(--naranja);
+        
+      }
+
       .carts_visual {
         position: relative;
         width: 25rem;
@@ -335,7 +488,7 @@
         height: 45vh;
         margin: 1rem 1rem 1rem 1rem;
         padding: auto;
-        border: 1px solid #4C0033;
+        border: 1px solid var(--purpura);
         border-radius: 8px;
       }
 
@@ -366,7 +519,7 @@
             flex-direction: column;
             width: 10rem;
             height: 40vh;
-            border: 1px solid #4C0033;
+            border: 1px solid var(--purpura);
             border-radius: 8px;
             margin: 1rem;
             text-align: center;
@@ -374,10 +527,10 @@
             z-index: 9;
          }
           .p1_visual {
-             color: #fff;
+             color: var(--white);
              font-weight: bold;
-             background-color: #4C0033;
-             border: 1px solid #4C0033;
+             background-color: var(--purpura);
+             border: 1px solid var(--purpura);
              border-radius: 8px;
              text-align: center;
              padding: 5px;
@@ -411,18 +564,18 @@
 
                .precio1_visual {
                  font-size: 1.5rem;
-                 color: white;
+                 color:var(--white);
                  margin-top: auto;
                }
 
                 .precio2_embutido{
                     font-size: 2rem;
-                    color: white;
+                    color: var(--white);
                 }
 
                 .p2_embutido {
                     font-size: 1.25rem;
-                    color: white;
+                    color: var(--white);
                 }
 
 
@@ -441,28 +594,22 @@
               z-index: 10;
               cursor: pointer;
               }
-
-              /*menu ul li a:hover*/
-
-
-
               .pcompra_visual:hover {
-                border: 1px solid #4C0033;
-                color: #4C0033;
-                background-color: #ff8800;
+                border: 1px solid var(--purpura);
+                color: var(--purpura);
+                background-color: var(--naranja);
                }
 
-
-               ::-webkit-scrollbar {
+            ::-webkit-scrollbar {
                 width: 12px;
             }
             ::-webkit-scrollbar-track {
-                border: 3px solid #4C0033;
+                border: 3px solid var(--purpura);
                 border-radius: 10px;
                 box-shadow: inset 0 0 2.5px 2px rgba(red, green, blue, alpha);
             }
             ::-webkit-scrollbar-thumb {
-                background: linear-gradient(to right,#ff8800,#4C0033,#ff8800);
+                background: linear-gradient(to right,var(--naranja),var(--purpura),var(--naranja));
                 border-radius: 6px;
             }
 
@@ -471,8 +618,8 @@
 
    .contenedor_footer {    
     width: 100%;
-    color: #fff;
-    background: linear-gradient(45deg,#ff8800,#4C0033,#ff8800,#4C0033,#ff8800);
+    color: var(--white);
+    background: linear-gradient(45deg,var(--naranja),var(--purpura),var(--naranja),var(--purpura),var(--naranja));
     background-size:  400% 400%;
     position: relative;
     animation: cambiar 7s ease infinite;
@@ -502,7 +649,7 @@
    }
    .localizacion a {
         text-decoration: none;
-        color: white;
+        color:var(--white);
         padding: 8px;
         border-radius: 8px;
    }
@@ -537,13 +684,13 @@
         align-items: center;
    }
    .redes ul li p {
-        color: white;
+        color: var(--white);
         padding: 8px;
         border-radius: 8px;
    }
    .redes ul li a {
         text-decoration: none;
-        color: white;
+        color:var(--white);
         padding: 8px;
         border-radius: 8px;
    }
@@ -579,7 +726,7 @@
    }
 
    .whatsapp p {
-        color: white;
+        color:var(--white);
         padding: 8px;
         border-radius: 8px;
    }

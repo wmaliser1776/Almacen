@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./final helado.css">
+    <link rel="stylesheet" href="./final compra.css">
    
     <title>Despensa Adonai-Fiambre</title>
 </head>
@@ -12,7 +12,7 @@
     <nav>
         <div class="contenedor_1">
             <div class="logo">
-                <img class="simbolo_almacen" src="../adonai/icono tienda.svg" alt="simbolo almacen">
+                <img class="simbolo_almacen" src="./img/icono tienda.svg" alt="simbolo almacen">
                 <a href="./final almacen adonai.html"></a>
             </div>
             <div class="logo">
@@ -21,31 +21,31 @@
             <div class="menu">
                     <ul>
                         <li class="item">
-                        <img src="../adonai/item ofertas.svg" alt="Oferta">
+                        <img src="./img/icono ofertas.svg" alt="Oferta">
                         <a href="./">Ofertas</a>
                     </li>
                         <li class="item">
-                        <img src="../adonai/icono bebidas.svg" alt="bebida">
+                        <img src="./img/icono bebidas.svg" alt="bebida">
                         <a href="./">Bebidas</a>
                     </li>
                         <li class="item">
-                        <img src="../adonai/icono jamon.svg" alt="fiambre">
+                        <img src="./img/icono jamon.svg" alt="fiambre">
                         <a href="./final embutido.html">Fiambreria</a>
                     </li>
                         <li class="item">
-                        <img src="../adonai/icono helado.svg" alt="helado">
+                        <img src="./img/icono helado.svg" alt="helado">
                         <a href="./final helado.html">Helado</a>
                     </li>
                         <li class="item">
-                        <img src="../adonai/icono tienda.svg" alt="almacen">
+                        <img src="./img/icono tienda.svg" alt="almacen">
                         <a href="./">Almacen</a>
                     </li>
                         <li class="item">
-                        <img src="../adonai/icono limpieza.svg" alt="limpieza">
+                        <img src="./img/icono limpieza.svg" alt="limpieza">
                         <a href="./">Limpieza</a>
                     </li>
                     <li id="botonCarrito" class="item carrito">
-                      <img src="./img/carrito.svg" alt="carrito">
+                      <img src="./img/icono carrito.svg" alt="carrito">
                       <button class="buttonCarrito">Carrito</button>
                     </li>
                 </ul>
@@ -53,29 +53,29 @@
             </div>
         </div>
         <!-- Aqui agrego la parte del menu desplegable del carrito 29/12/2022-->
+        
         <aside class="productDetail inactive">
-          <div class="title-container">
-          <img src="./img/flechita.svg" alt="arrow">
-          <p class="title">My order</p>
-          </div>
-            <div class="myOrderContent">
-
-          </div>
-              <!-- parte final de menu desplegable-->
-                  <div class="final-menu-desplegable">
-                      <div class="order">
-                          <p>
-                          <span>Total</span>
-                          </p>
-                          <p id="sumatoraCarrito"></p>
-                          </div>
-                          <a href="./final compra.html" class="primary-button">
-                          Checkout
-                          </a>
-                          </div>
-                  </div>
-              </aside>
-
+            <div class="title-container">
+            <img src="../fiambre/img-fiambre/flechita.svg" alt="arrow">
+            <p class="title">My order</p>
+            </div>
+              <div class="myOrderContent">
+  
+            </div>
+                <!-- parte final de menu desplegable-->
+                    <div class="final-menu-desplegable">
+                        <div class="order">
+                            <p>
+                            <span>Total</span>
+                            </p>
+                            <p id="sumatoraCarrito"></p>
+                            </div>
+                            <button class="primary-button">
+                            Checkout
+                            </button>
+                            </div>
+                    </div>
+                </aside>
       <!-- Aqui termina la parte del menu desplegable del carrito 29/12/2022-->
     </nav>
     
@@ -86,6 +86,55 @@
 
 
        <main class="padre">
+                <div class="contenedorConfirmacion">
+                    <div class="tituloBoton">
+                        <h1 class="tituloDeConfirmacion"> Carrito de compras</h1>
+                        <img class="imagenCarritoTiulo" src="./img/icono carrito.svg" alt="carrito">
+                    </div>
+                    <aside class="menuDeConfirmacion activar">
+                        
+                    </aside>
+
+                    <div class="final-menu-desplegable">
+                        <div class="order">
+                            <p>
+                            <span>Total</span>
+                            </p>
+                            <p id="sumatoraCarrito"></p>
+                            </div>
+                            <button class="primary-button">
+                            Confirmar
+                            </button>
+                            </div>
+                    </div>
+
+
+            <div class="formulario">
+                <div class="inputName">
+                    <label class="nombreCompleto" for="name">Nombre completo</label>
+                    <input class="inputNombre" type="text" id="name" name="name">
+                </div>
+                <div class="inputName">
+                    <label class="nombreCompleto" for="name">Dirección</label>
+                    <input class="inputNombre" type="text" id="Dirección" name="Dirección">
+                </div>
+                <div class="inputName">
+                    <label class="nombreCompleto" for="name">Celular</label>
+                    <input class="inputNombre" type="text" id="celular" name="celular">
+                </div>
+                <div class="inputName">
+                    <label class="nombreCompleto" for="name">Email</label>
+                    <input class="inputNombre" type="email" id="email" pattern=".+@globex\.com" size="30" required>
+                </div>
+                <div class="inputName">
+                    <label class="nombreCompleto" for="name">Día y horario de entrega</label>
+                    <input class="inputHorarioDia" type="datetime-local" id="meeting-time" name="meeting-time" value="2023-01-12T00:00">
+                </div>
+                <div class="inputName">
+                    <input class="formularioButton" type="button" value="Enviar">
+                </div>
+                
+            </div>
        
     <!--     
         <div class="carts_embutido">
@@ -137,6 +186,6 @@
        </div> 
 </div>
     </footer>
-    <script src="./final embutido con boton de cantidad.js"></script>
+    <script src="./final compra.js"></script> 
 </body>
 </html>
